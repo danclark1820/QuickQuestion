@@ -16,10 +16,14 @@ class ResponsesController < ApplicationController
     attributes = params[:response]
     @response = Response.new(q_one: attributes[:q_one], q_two: attributes[:q_two], q_three: attributes[:q_three])
     if @response.save
-      puts "repsponse created"
+      redirect_to responses_path
     else
       puts "failed to create Response object"
     end
+  end
+
+  def results
+    raise 'create results view'
   end
 
 end
