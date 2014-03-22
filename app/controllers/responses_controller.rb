@@ -13,10 +13,12 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @response = Response.new(params[:response])
+    attributes = params[:response]
+    @response = Response.new(q_one: attributes[:q_one], q_two: attributes[:q_two], q_three: attributes[:q_three])
     if @response.save
+      puts "repsponse created"
     else
-      render 'new'
+      puts "failed to create Response object"
     end
   end
 
