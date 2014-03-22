@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q_one: false
+  q_two: false
+  q_three: false
+
+two:
+  q_one: false
+  q_two: false
+  q_three: false

@@ -1,0 +1,8 @@
+<h1>Quick Questions</h1>
+
+<%= form_for @response, url: index do |f| %>
+  <%= f.radio :q_one %>
+  <%= f.radio :q_two  %>
+  <%= f.radio :q_three%>
+  <%= f.submit "Feedback" %>
+<% end %>
