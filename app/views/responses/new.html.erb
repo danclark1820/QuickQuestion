@@ -1,27 +1,37 @@
-<h1>Quick Questions</h1>
+<!DOCTYPE html>
+<html>
 
-<%= form_for @response do |f| %>
+<head>
+  <link rel="stylesheet" type="text/css" href="../assets/application.css">
+</head>
 
-  Are you Male or Female?<br>
-  <%= f.radio_button :q_one, true %>
-  <%= f.label :q_one, "Male", value: true %>
+  <body>
+    <h1>Quick Questions</h1>
 
-  <%= f.radio_button :q_one, false %>
-  <%= f.label :q_one, "Female", value: false %><br>
+    <%= form_for @response do |f| %>
 
-  Is global energy consumption a problem?<br>
-  <%= f.radio_button :q_two, true %>
-  <%= f.label :q_one, "Yes", value: true %>
+      Are you Male or Female?<br>
+      <%= f.radio_button :q_one, true %>
+      <%= f.label :q_one, "Male", value: true %>
 
-  <%= f.radio_button :q_two, false %>
-  <%= f.label :q_one, "No", value: false %><br>
+      <%= f.radio_button :q_one, false %>
+      <%= f.label :q_one, "Female", value: false %><br>
 
-  Should health care be paid for by our goverment?<br>
-  <%= f.radio_button :q_three, true %>
-  <%= f.label :q_three, "Yes", value: true %>
+      Is global energy consumption a problem?<br>
+      <%= f.radio_button :q_two, true %>
+      <%= f.label :q_one, "Yes", value: true %>
 
-  <%= f.radio_button :q_three, false %>
-  <%= f.label :q_three, "No", value: false %><br>
+      <%= f.radio_button :q_two, false %>
+      <%= f.label :q_one, "No", value: false %><br>
 
-  <%= f.submit "Feedback" %>
-<% end %>
+      Should health care be paid for by our goverment?<br>
+      <%= f.radio_button :q_three, true %>
+      <%= f.label :q_three, "Yes", value: true %>
+
+      <%= f.radio_button :q_three, false %>
+      <%= f.label :q_three, "No", value: false %><br>
+
+      <%= f.submit "Feedback" %>
+    <% end %>
+  </body>
+</html>

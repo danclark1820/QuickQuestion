@@ -1,3 +1,40 @@
-<h1>Quick Question</h1>
-<%= link_to "Got a second?", new_response_path %>
+<!DOCTYPE html>
+<html>
 
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+  <body>
+    <h1>Quick Question</h1>
+    <%= link_to "Got a second?", new_response_path %>
+
+      <h2>What others said before you</h2>
+
+      <h3>Survey Demographic</h3>
+        <h4>Total Surveyors</h4>
+        <%= Response.count %>
+
+        <h4> Survey Sex Ratio </h4>
+          <h5>Male Surveyors:
+          <%= ((Response.where(q_one: true).count).to_f / Response.count)*100 %>%<h5>
+
+          <h5>Female Surveyors:
+          <%= ((Response.where(q_one: false).count).to_f / Response.count)*100 %>%</h5>
+
+        <h4> Global Energy Concern <h4>
+          <h5>Surveyors who believe global energy consumption is a problem.
+          <%= ((Response.where(q_two: true).count).to_f / Response.count)*100 %>%</h5>
+
+          <h5>Surveyors who believe global energy consumption is not a problem:
+          <%= ((Response.where(q_two: false).count).to_f / Response.count)*100 %>%</h5>
+
+        <h4> The Health Care Debate <h4>
+          <h5>Surveyors who believe health care should be paid for by our government:
+          <%= ((Response.where(q_three: true).count).to_f / Response.count)*100 %>%</h5>
+
+          <h5>Surveyors who believe health care should not be paid for by our government:
+          <%= ((Response.where(q_three: false).count).to_f / Response.count)*100 %>%</h5>
+
+  </body>
+</html>

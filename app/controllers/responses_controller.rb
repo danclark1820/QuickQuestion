@@ -22,8 +22,5 @@ class ResponsesController < ApplicationController
     end
   end
 
-  def results
-    raise 'create results view'
-  end
 
 end
